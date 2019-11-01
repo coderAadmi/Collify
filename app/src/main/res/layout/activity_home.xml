@@ -1,0 +1,325 @@
+<androidx.drawerlayout.widget.DrawerLayout android:layout_width="match_parent"
+    android:id="@+id/drawer"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            app:title="Collify"
+            app:titleTextColor="@android:color/white"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/black"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/news_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/side_nav"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:layout_width="300dp"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:background="#EFEFFE"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:src="@drawable/ic_user"
+                            android:layout_marginStart="32dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/profile_img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp" />
+
+                        <ImageView
+                            android:id="@+id/edit_info"
+                            android:src="@drawable/ic_edit"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="32dp"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/profile_name"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:layout_toEndOf="@+id/profile_img"
+                            android:text="Poloman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/profile_phone"
+                            android:layout_below="@+id/profile_name"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:textColor="#6F6F6F"
+                            android:textSize="14sp"
+                            android:layout_toEndOf="@+id/profile_img"
+                            android:text="+91 9015410227"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/profile_email"
+                            android:layout_below="@+id/profile_phone"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:textColor="#6F6F6F"
+                            android:textSize="14sp"
+                            android:layout_toEndOf="@+id/profile_img"
+                            android:text="polomann@gmail.com"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:background="#EEEEFE"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:id="@+id/help_option"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/help_option_img"
+                            android:src="@drawable/ic_help"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/help_option_title"
+                            android:text="Help &amp; Support"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/help_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:background="#EEEEFE"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/history_option"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/history_option_img"
+                            android:src="@drawable/ic_history"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/history_option_title"
+                            android:text="History"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/history_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:background="#EEEEFE"
+                        android:id="@+id/faq_option"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/faq_option_img"
+                            android:src="@drawable/ic_faq"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/faq_option_title"
+                            android:text="FAQ"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/faq_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:background="#EEEEFE"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/about_option"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/about_option_img"
+                            android:src="@drawable/ic_about_us"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/about_option_title"
+                            android:text="About us"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/about_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:background="#EEEEFE"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/share_option"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/share_option_img"
+                            android:src="@drawable/ic_share"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/share_option_title"
+                            android:text="Share app"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/share_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_height="54dp"
+                        android:background="#EEEEFE"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/rate_option"
+                        android:layout_width="match_parent">
+
+                        <ImageView
+                            android:id="@+id/rate_option_img"
+                            android:src="@drawable/ic_rate"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:id="@+id/rate_option_title"
+                            android:text="Rate us"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/rate_option_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:background="?attr/selectableItemBackground"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:layout_centerInParent="true"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:layout_margin="2dp"
+                                android:background="#EEEEFE"
+                                android:id="@+id/logout"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:letterSpacing="0.1"
+                                android:text="Logout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

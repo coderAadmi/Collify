@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "92170647180",
+    "firebase_url": "https://collify-7c90e.firebaseio.com",
+    "project_id": "collify-7c90e",
+    "storage_bucket": "collify-7c90e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92170647180:android:e81c88531391256f592da9",
+        "android_client_info": {
+          "package_name": "com.gbpec.collify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92170647180-rot8rub2ggm0aui08k9jog4tuf3uimqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvojcFD87AD9DePwoCcBM93R75MGsvF3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92170647180-rot8rub2ggm0aui08k9jog4tuf3uimqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
