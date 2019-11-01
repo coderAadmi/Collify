@@ -1,0 +1,5 @@
+Firebase Firestore has been integrated - Verification is still not complete
+College news loading on HomeActivity
+Image for news is also added along with description
+More details can be seen by clicking on news.
+Drawer layout is colorful + has user details.
